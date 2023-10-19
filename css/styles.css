@@ -62,8 +62,8 @@ img {
 .header {
   border-bottom: 1px solid #e7e9fc;
   background: #ffffff;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -77,7 +77,7 @@ img {
 
 .navigation {
   display: flex;
-  gap: 76px;
+  gap: 120px;
   align-items: center;
 }
 
@@ -104,7 +104,7 @@ img {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -126,7 +126,7 @@ img {
 
 .height {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 28px;
 }
 
 .contacts-container {
@@ -135,11 +135,10 @@ img {
 }
 .link-contacts {
   color: #434455;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -753,15 +752,18 @@ img {
 }
 
 .modal {
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   border-radius: 4px;
   background-color: #fcfcfc;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
+  padding-top: 72px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  padding-left: 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -930,20 +932,21 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  display: block;
+  display: flex;
+  gap: 4px;
   align-items: center;
 }
 
 .check-text a {
   color: #4d5ae5;
   text-decoration-line: underline;
-  margin-left: 4px;
 }
 
 .check-text-box {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -971,7 +974,23 @@ img {
     max-width: 736px;
     padding: 0;
   }
+  /* ==================================== */
 
+  .menu {
+    display: flex;
+  }
+
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .menu-open-btn {
+    display: none;
+  }
+
+  /* ==================================== */
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1064,6 +1083,13 @@ img {
   .footer-form-input {
     width: 264px;
   }
+  /* ==================================== */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 }
 
 /* ==========================
@@ -1074,7 +1100,30 @@ img {
   .container {
     max-width: 1128px;
   }
+  /* ==================================== */
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 
+  .navigation {
+    gap: 76px;
+  }
+
+  .height {
+    padding-bottom: 24px;
+  }
+
+  .contacts-container {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .link-contacts {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  /* ==================================== */
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1175,59 +1224,3 @@ img {
     margin-left: 0;
   }
 }
-
-/* 
-.hero {
-  max-width: 1440px;
-  background: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/main-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin: 0 auto;
-}
-
-.hero .hero-container {
-  padding-top: 188px;
-  padding-bottom: 188px;
-}
-
-.title {
-  color: #fff;
-  max-width: 496px;
-  text-align: center;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 1.12px;
-  margin: 0 auto;
-  margin-bottom: 48px;
-}
-
-.btn {
-  min-width: 169px;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.64px;
-  background: #4d5ae5;
-  padding: 16px 32px;
-
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  border-radius: 4px;
-  background-color: #4d5ae5;
-  border: none;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn:hover,
-.btn:focus {
-  background-color: #404bbf;
-} */
