@@ -100,6 +100,7 @@ img {
   gap: 40px;
 }
 .link-menu {
+  display: block;
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -125,7 +126,8 @@ img {
 }
 
 .height {
-  padding-bottom: 28px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 .contacts-container {
@@ -983,6 +985,11 @@ img {
   }
   /* ==================================== */
 
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .menu {
     display: flex;
   }
@@ -1112,17 +1119,8 @@ img {
     max-width: 1128px;
   }
   /* ==================================== */
-  .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
   .navigation {
     gap: 76px;
-  }
-
-  .height {
-    padding-bottom: 24px;
   }
 
   .contacts-container {
